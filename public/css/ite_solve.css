@@ -1,0 +1,314 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: rgb(55, 95, 122);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 95, 122);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: rgb(55, 95, 122);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Formulario */
+.formulario {
+    background-color: rgb(38, 186, 165);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.grupo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.grupo label {
+    font-weight: bold;
+    color: white;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.grupo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(55, 95, 122);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+    color: rgb(55, 95, 122);
+    flex: 1;
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  BOTON DIVIDIR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+.grupo.boton button {
+    background-color: rgb(55, 95, 122);
+    color: white;
+    border: none;
+    height: 50px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.grupo.boton button:hover {
+    background-color: rgb(22, 179, 14);
+}
+
+/* Tabla de división */
+table {
+    width: auto; /* Ajustar al contenido */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table td {
+    padding: 0;
+    border: 1px solid rgb(227, 226, 227);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    width: 50px; /* Tamaño fijo para celdas cuadradas */
+    height: 50px; /* Tamaño fijo para celdas cuadradas */
+    position: relative;
+}
+
+/* Símbolo de división */
+.simbolo-division {
+    position: relative;
+}
+
+.simbolo-division::after {
+    content: "";
+    position: absolute;
+    bottom: -1px; /* Borde inferior */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgb(55, 95, 122);
+}
+/* Estilos para la tabla */
+#cuadriculas {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+#cuadriculas td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+/* Borde izquierdo e inferior */
+.izquierda-abajo {
+    border-left: 2px solid rgb(55, 95, 122) !important;
+    border-bottom: 2px solid rgb(55, 95, 122) !important;
+}
+
+/* Solo borde inferior */
+.abajo {
+    border-bottom: 2px solid rgb(55, 95, 122) !important;
+}
+
+/* Ajustar tamaño de fuente al 90% del área */
+table td span {
+    display: inline-block;
+    width: 90%;
+    height: 90%;
+    line-height: 45px; /* Centrar verticalmente */
+    font-size: 90%; /* Ajustar tamaño de fuente */
+}
+
+/* Botones de navegación */
+form[method="POST"] {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+form[method="POST"] button {
+    background-color: rgb(55, 95, 122);
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+}
+
+form[method="POST"] button[name="accion"][value="reiniciar"] {
+    background-color: rgb(38, 186, 165);
+}
+
+form[method="POST"] button[name="accion"][value="atras"] {
+    background-color: rgb(55, 95, 122);
+}
+
+form[method="POST"] button[name="accion"][value="siguiente"] {
+    background-color: rgb(55, 95, 122);
+}
+
+form[method="POST"] button[name="accion"][value="resolver"] {
+    background-color: rgb(38, 186, 165);
+}
+
+form[method="POST"] button:hover {
+    opacity: 0.9;
+}
+
+/* Iconos de FontAwesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+/* Texto de paso actual */
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(55, 95, 122);
+    margin-bottom: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .formulario {
+        flex-direction: row; /* Siempre en una fila */
+    }
+
+    .grupo {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .grupo.boton {
+        width: auto;
+    }
+
+    .grupo.boton button {
+        width: auto;
+    }
+
+    form[method="POST"] {
+        flex-direction: row;
+    }
+
+    form[method="POST"] button {
+        width: auto;
+    }
+}
+
+/*sds*/
+/* Estilos base para los botones */
+form[method="POST"] button {
+    background-color: rgb(55, 95, 122);
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Ajusta el padding para pantallas grandes */
+    border-radius: 4px; /* Bordes redondeados para pantallas grandes */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Estilos específicos para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    form[method="POST"] button {
+        padding: 10px; /* Reduce el padding para pantallas pequeñas */
+        border-radius: 50%; /* Hace que los botones sean circulares */
+        width: 50px; /* Tamaño fijo para botones circulares */
+        height: 100px; /* Tamaño fijo para botones circulares */
+        min-width: auto; /* Elimina el ancho mínimo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form[method="POST"] button i {
+        margin: 0; /* Elimina el margen de los íconos */
+    }
+
+    form[method="POST"] button span {
+        display: none; /* Oculta el texto en pantallas pequeñas */
+    }
+}
+
+/* Estilos específicos para pantallas grandes (más de 768px) */
+@media (min-width: 769px) {
+    form[method="POST"] button {
+        padding: 10px 20px; /* Ajusta el padding para pantallas grandes */
+        border-radius: 4px; /* Bordes redondeados para pantallas grandes */
+        width: auto; /* Ancho automático para botones rectangulares */
+        height: auto; /* Altura automática para botones rectangulares */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    form[method="POST"] button span {
+        display: inline; /* Muestra el texto en pantallas grandes */
+    }
+}
+
+/* Estilos para botones específicos */
+form[method="POST"] button[name="accion"][value="reiniciar"] {
+    background-color: rgb(38, 186, 165);
+}
+
+form[method="POST"] button[name="accion"][value="atras"] {
+    background-color: rgb(55, 95, 122);
+}
+
+form[method="POST"] button[name="accion"][value="siguiente"] {
+    background-color: rgb(55, 95, 122);
+}
+
+form[method="POST"] button[name="accion"][value="resolver"] {
+    background-color: rgb(38, 186, 165);
+}
+
+form[method="POST"] button:hover {
+    opacity: 0.9;
+}
